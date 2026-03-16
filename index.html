@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Microprocessor & Microcontroller Library</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+margin:0;
+font-family:Poppins, sans-serif;
+background:#f4f1e6;
+color:#222;
+}
+
+/* header */
+
+.header{
+background:#3d3b36;
+color:white;
+padding:14px 30px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+}
+
+.logo{
+font-size:20px;
+font-weight:600;
+}
+
+.search input{
+padding:7px 10px;
+border-radius:6px;
+border:none;
+width:220px;
+}
+
+/* hero */
+
+.hero{
+background:#e7e2cf;
+padding:30px;
+text-align:center;
+}
+
+.hero h1{
+margin:0;
+font-size:32px;
+}
+
+.hero p{
+max-width:700px;
+margin:10px auto;
+font-size:15px;
+}
+
+/* container */
+
+.container{
+max-width:1200px;
+margin:auto;
+padding:30px;
+}
+
+.section{
+margin-bottom:40px;
+}
+
+.section-title{
+font-size:22px;
+margin-bottom:15px;
+}
+
+/* topics */
+
+.topics{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:15px;
+}
+
+.topic{
+background:white;
+padding:15px;
+border-radius:8px;
+box-shadow:0 2px 10px rgba(0,0,0,0.08);
+}
+
+/* books */
+
+.books{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.book{
+width:180px;
+background:white;
+border-radius:8px;
+padding:10px;
+box-shadow:0 2px 10px rgba(0,0,0,0.1);
+text-align:center;
+}
+
+.book img{
+width:100%;
+border-radius:5px;
+}
+
+.book-title{
+font-size:14px;
+margin:10px 0;
+min-height:40px;
+}
+
+.download{
+background:#2a7ae2;
+color:white;
+padding:8px 12px;
+border-radius:5px;
+text-decoration:none;
+font-size:13px;
+display:inline-block;
+}
+
+.download:hover{
+background:#1d5fb8;
+}
+
+/* footer */
+
+.footer{
+background:#3d3b36;
+color:#ccc;
+text-align:center;
+padding:20px;
+font-size:13px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="header">
+
+<div class="logo">
+Microprocessor Library
+</div>
+
+<div class="search">
+<input id="searchInput" placeholder="Search books...">
+</div>
+
+</div>
+
+<div class="hero">
+
+<h1>Microprocessors & Microcontrollers</h1>
+
+<p>
+A microprocessor is the central processing unit of a computer system on a single integrated circuit.
+Microcontrollers integrate CPU, memory, and peripherals on one chip and are widely used in embedded systems,
+IoT devices, robotics, and automation.
+</p>
+
+</div>
+
+<div class="container">
+
+<div class="section">
+
+<div class="section-title">Key Topics</div>
+
+<div class="topics">
+
+<div class="topic">8085 Architecture</div>
+<div class="topic">8086 Microprocessor</div>
+<div class="topic">Instruction Set & Addressing Modes</div>
+<div class="topic">Interrupt Handling</div>
+<div class="topic">Assembly Language Programming</div>
+<div class="topic">Memory Interfacing</div>
+<div class="topic">I/O Interfacing</div>
+<div class="topic">Microcontroller Basics</div>
+
+</div>
+
+</div>
+
+<div class="section">
+
+<div class="section-title">Course Modules</div>
+
+<div class="topics">
+
+<div class="topic">Module 1: Introduction to Microprocessors</div>
+<div class="topic">Module 2: 8085 Instruction Set</div>
+<div class="topic">Module 3: 8086 Architecture</div>
+<div class="topic">Module 4: Assembly Programming</div>
+<div class="topic">Module 5: Interfacing Techniques</div>
+<div class="topic">Module 6: Microcontrollers & Embedded Systems</div>
+
+</div>
+
+</div>
+
+<div class="section">
+
+<div class="section-title">Featured Books</div>
+
+<div class="books" id="booksContainer">
+
+<div class="book">
+
+<img src="mpmc.png">
+
+<div class="book-title">
+Microprocessors & Microcontrollers Textbook
+</div>
+
+<a class="download" href="mpmc_textbook.pdf" download>
+Download PDF
+</a>
+
+</div>
+
+<div class="book">
+
+<img src="8086.png">
+
+<div class="book-title">
+Solved Examples From Ebook
+</div>
+
+<a class="download" href="8086_architecture.pdf" download>
+Download PDF
+</a>
+
+</div>
+
+<div class="book">
+
+<img src="mcu.png">
+
+<div class="book-title">
+Introduction to Microcontrollers
+</div>
+
+<a class="download" href="microcontroller_basics.pdf" download>
+Download PDF
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="section">
+
+<div class="section-title">About This Subject</div>
+
+<p>
+Microprocessors and microcontrollers form the foundation of modern computing and embedded systems.
+They are used in smartphones, automobiles, medical equipment, industrial automation, and consumer electronics.
+Understanding processor architecture, instruction sets, and hardware interfacing is essential for computer
+engineering students and embedded system developers.
+</p>
+
+</div>
+
+</div>
+
+<div class="footer">
+Microprocessor & Microcontroller Library — Educational Resource
+</div>
+
+<script>
+
+/* simple search */
+
+document.getElementById("searchInput").addEventListener("keyup",function(){
+
+let filter=this.value.toLowerCase();
+
+let books=document.querySelectorAll(".book");
+
+books.forEach(function(book){
+
+let title=book.innerText.toLowerCase();
+
+book.style.display=title.includes(filter)?"block":"none";
+
+});
+
+});
+
+</script>
+
+</body>
+</html>
